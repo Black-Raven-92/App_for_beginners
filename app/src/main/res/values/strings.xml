@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">App_for_beginners</string>
+    <string name="edittext_name">Ваше имя?</string>
+    <string name="bnt_text">Поздороваться</string>
+</resources>
