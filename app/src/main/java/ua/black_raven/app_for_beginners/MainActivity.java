@@ -7,12 +7,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private String text;
-    boolean flag1;
+    private boolean flag1;
 
     Button nextBtn;
     TextView textView;
@@ -36,22 +35,23 @@ public class MainActivity extends AppCompatActivity {
         }
         nextBtn.setOnClickListener(v ->
         {
-            Intent intent = new Intent(MainActivity.this, next_activity.class);
+            Intent intent = new Intent(MainActivity.this, NextActivity.class);
             startActivity(intent);
 
+        });
+        helloBtn.setOnClickListener(v -> {
+            if (flag1) {
+                initHi();
+            } else {
+                initHello();
+            }
         });
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        helloBtn.setOnClickListener(v -> {
-            if (flag1 == true) {
-                initHi();
-            } else {
-                initHello();
-            }
-        });
+
     }
 
     public void initHello() {

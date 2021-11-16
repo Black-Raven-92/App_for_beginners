@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
-public class next_activity extends AppCompatActivity {
-    boolean flag;
-    CheckBox checkBox;
+import com.google.android.filament.View;
+
+public class NextActivity extends AppCompatActivity {
+    private boolean flag;
+    private CheckBox checkBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,13 +19,17 @@ public class next_activity extends AppCompatActivity {
         setContentView(R.layout.next_activity);
 
         checkBox = findViewById(R.id.checkBox3);
-        checkBox.setOnClickListener(v->{
-            flag=true;
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    flag=true;
+                }else{
+                    flag=false;
+                }
+            }
         });
-
-
     }
-
 
 
     @Override
