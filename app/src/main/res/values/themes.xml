@@ -16,9 +16,12 @@
     <style name="btn_style" parent="TextAppearance.AppCompat.Button">
         <item name="android:background">@color/green</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="android:layout_width">@dimen/btn_width</item>
         <item name="strokeWidth">2dp</item>
         <item name="strokeColor">@color/purple_200</item>
+        <item name="android:textStyle">bold</item>
+
+
     </style>
 </resources>
